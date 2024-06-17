@@ -1,3 +1,7 @@
+## BAEKJOON QUESTION SOLVING
+My Baekjoon Diary
+every baekjoon solving in 'src'
+
 ## Getting Started
 
 Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
