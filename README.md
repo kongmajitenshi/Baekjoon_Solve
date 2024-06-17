@@ -1,5 +1,6 @@
 ## BAEKJOON QUESTION SOLVING
 My Baekjoon Diary
+every baekjoon solving in 'src'
 
 ## Getting Started
 
