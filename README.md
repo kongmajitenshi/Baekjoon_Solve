@@ -1,4 +1,4 @@
 ## BAEKJOON QUESTION SOLVING
-My Baekjoon Diary
-every baekjoon solving in 'src'
-This repository has only source code files
+My Baekjoon Diary \n
+every baekjoon solving in 'src' \n
+This repository has only source code files \n
