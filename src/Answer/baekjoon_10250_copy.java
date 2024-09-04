@@ -10,6 +10,7 @@ public class baekjoon_10250_copy {
 
         Scanner sc = new Scanner(System.in);
 
+        @SuppressWarnings("unused")
         int H, W, N;  // H높이 W너비 N몇번째손님
         int T = sc.nextInt();
         for(int i=0; i<T; i++){
