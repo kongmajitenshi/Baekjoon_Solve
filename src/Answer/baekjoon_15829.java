@@ -1,8 +1,7 @@
 package Answer;
-import java.math.BigInteger;
 import java.util.Scanner;
 
-public class baekjoon_15829 {
+public class baekjoon_15829 { // 50점짜리
     public static void main(String[] args) {
         // 입력받은 문자를 아스키코드값으로 변환하여 계산
         Scanner sc = new Scanner(System.in);
@@ -13,7 +12,7 @@ public class baekjoon_15829 {
         int value = 0;
         int M = 1234567891;
         
-        for(int i=0; i<munja.length(); i++){
+        for(int i=0; i<num; i++){
             int N = munja.charAt(i);
             value += (N-96) * (Math.pow(31, i));
             // N-96 = 1이며, 이는 a를 뜻함.
