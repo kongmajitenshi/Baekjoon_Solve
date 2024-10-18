@@ -6,5 +6,5 @@ This repository has only source code files.
 
 Now, used only 'java'.
 
-## 20241018 Added
+## 2024.10.18 Added
 - Add language 'Python' (in repository 'baekjoon_py')
