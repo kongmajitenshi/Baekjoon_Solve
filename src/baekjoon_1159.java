@@ -12,47 +12,32 @@ public class baekjoon_1159 {
         for(int i=0; i<N; i++){
             firstName = br.readLine();
             names[i] = firstName.charAt(0);
-            // System.out.println("naems확인: " + names[i]);
         }
         
-
-        // StringBuilder sb = new StringBuilder();
-        
-        int count; 
-        char check = names[0]; 
-        // char[] pre = new char[N];
-        char[] result = new char[N];
+        boolean[] checked = new boolean[26];
+        boolean found = false;
+        StringBuilder sb = new StringBuilder();
         for(int i=0; i<N; i++){
-            count = 0;
-            // pre[i] = check;
-            check = names[i];
-            
-            for(int j=0; j<N; j++){
-                if(check == names[j] && check != result[j]){
-                    count++;
-                    if(count > 4){
-                        result[i] = check;
-                        break;
+            if(!checked[names[i] - 'a']){
+                int count = 0;
+                for(int j=0; j<N; j++){
+                    if(names[i] == names[j]){
+                        count++;
                     }
                 }
+                if(count >= 5){
+                    sb.append(names[i]);
+                    found = true;
+                }
+                checked[names[i] - 'a'] = true;
             }
         }
 
-        // for(int i=0; i<result.length; i++){
-        //     System.out.println("확인용: " + result[i]);
-        // }
-        // System.out.println("길이: " + result.length);
-        if(result[0] != ' '){
-            for(int i=0; i<N; i++){
-                System.out.printf("%c", result[i]);    
-            }
+        if(found == true){
+            System.out.println(sb);
         }else{
             System.out.println("PREDAJA");
         }
-        
-        // System.out.println(result[0]);
-        
-
 
         br.close();
     }  // main
