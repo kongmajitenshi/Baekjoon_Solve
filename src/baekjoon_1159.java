@@ -7,36 +7,22 @@ public class baekjoon_1159 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         int N = Integer.parseInt(br.readLine());
-        char[] names = new char[N];
-        String firstName;
+        int[] check = new int[26];
         for(int i=0; i<N; i++){
-            firstName = br.readLine();
-            names[i] = firstName.charAt(0);
+            check[br.readLine().charAt(0) - 97]++;
         }
         
-        boolean[] checked = new boolean[26];
-        boolean found = false;
         StringBuilder sb = new StringBuilder();
-        for(int i=0; i<N; i++){
-            if(!checked[names[i] - 'a']){
-                int count = 0;
-                for(int j=0; j<N; j++){
-                    if(names[i] == names[j]){
-                        count++;
-                    }
-                }
-                if(count >= 5){
-                    sb.append(names[i]);
-                    found = true;
-                }
-                checked[names[i] - 'a'] = true;
+        for(int i=0; i<check.length; i++){
+            if(check[i] >= 5){
+                sb.append((char)(i+97));
             }
         }
 
-        if(found == true){
-            System.out.println(sb);
-        }else{
+        if(sb.length() == 0){
             System.out.println("PREDAJA");
+        }else{
+            System.out.println(sb);
         }
 
         br.close();
