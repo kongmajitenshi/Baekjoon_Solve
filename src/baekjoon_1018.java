@@ -12,7 +12,7 @@ public class baekjoon_1018 {
         int M = Integer.parseInt(input.split(" ")[1]);  // 가로
         char[][] chess = new char[N][M];  // 체스 판 틀만 생성.
         String chesspan;
-        int count = 0;  // 몇 칸 칠해야 하는지 셀 것. 이걸 출력하면 됨.  
+        // int count = 0;  // 몇 칸 칠해야 하는지 셀 것. 이걸 출력하면 됨.  
         for(int i=0; i<N; i++){
             chesspan = br.readLine();
             for(int j=0; j<M; j++){
