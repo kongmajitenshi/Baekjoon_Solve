@@ -1,3 +1,4 @@
+package Answer;
 import java.util.Scanner;
 
 public class baekjoon_1094 {
