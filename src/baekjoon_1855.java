@@ -24,7 +24,7 @@ public class baekjoon_1855 {
         sc.close();
 
         String[] text = new String[eng.length()/k];
-        StringBuilder sb = new StringBuilder();
+        // StringBuilder sb = new StringBuilder();
 
         for(int i=0; i<text.length; i++){
             int start = i*k;
