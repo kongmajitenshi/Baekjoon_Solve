@@ -12,6 +12,7 @@ public class baekjoon_2704 {
 
         for(int i=0; i<times; i++){
             StringBuilder sb = new StringBuilder();
+            StringBuilder sb2 = new StringBuilder();
             String input = br.readLine();
             String binary;
             String format;
@@ -21,11 +22,13 @@ public class baekjoon_2704 {
                 sb.append(format);
             }
             for(int j=0; j<6; j++){
-                System.out.printf("%c%c%c", sb.charAt(j), sb.charAt(j+6), sb.charAt(j+12));
+                sb2.append(sb.charAt(j));
+                sb2.append(sb.charAt(j+6));
+                sb2.append(sb.charAt(j+12));
+                // System.out.printf("%c%c%c", sb.charAt(j), sb.charAt(j+6), sb.charAt(j+12));
             }
-            System.out.print(" ");
-            System.out.printf("%s", sb);
-            System.out.println();
+            //System.out.print(" ");
+            System.out.printf("%s %s\n", sb2, sb);
         }
         br.close();
 
