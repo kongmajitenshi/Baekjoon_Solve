@@ -40,13 +40,12 @@ public class baekjoon_2596 {
                     check = true;
                     break;
                 }
-                check = false;
+                check = false;  // check가 true라면 false로 바뀌지 않음. break문에 걸려서 반복문이 끝나기 때문.
                 // else if(count >= 2){
                     //     check = true;
                     //     idk = j;
                     //     break;
                     // }
-                    
                 }
             if(check == false){
                 idk = i+1;
