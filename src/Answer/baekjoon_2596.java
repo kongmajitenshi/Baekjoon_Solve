@@ -24,7 +24,7 @@ public class baekjoon_2596 {
          * 최대 반복 횟수는 n번인데, 중간에 모르는게 뜨면 반복문을 탈출함.
          */
         StringBuilder sb = new StringBuilder();
-        // int idk = 0;
+        int idk = 0;
         Boolean check = false;
         for(int i=0; i<n; i++){
             // if(check == true){
@@ -40,6 +40,7 @@ public class baekjoon_2596 {
                     check = true;
                     break;
                 }
+                check = false;
                 // else if(count >= 2){
                     //     check = true;
                     //     idk = j;
@@ -48,7 +49,7 @@ public class baekjoon_2596 {
                     
                 }
             if(check == false){
-                System.out.println(i+1);
+                idk = i+1;
                 break;
             }
             // 문제는 ABCDEFGH 하나하나 반복을 다 해봐야 한다는 것. 이것도 스위치 케이스로 하면 되려나?
@@ -66,7 +67,11 @@ public class baekjoon_2596 {
             //     default: check = true; idk = i+1; break;
             // }
         }
-        System.out.println(sb);
+        if(check == false){
+            System.out.println(idk);
+        }else{
+            System.out.println(sb);
+        }
         br.close();
         // if(check == true){
         //     System.out.println(idk);
