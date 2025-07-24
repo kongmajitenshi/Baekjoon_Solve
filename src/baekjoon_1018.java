@@ -10,22 +10,19 @@ public class baekjoon_1018 {
         m = Integer.parseInt(input.split(" ")[1]);  // 가로
         String wStart = "WBWBWBWB", bStart = "BWBWBWBW";
         int count = 0;
-        String[] chess = new String[n];
+        char[][] chess = new char[n][m];
         for(int i=0; i<n; i++){
             String in = br.readLine();
-            chess[i] = in;
+            for(int j=0; j<m; j++){
+                chess[i][j] = in.charAt(j);
+            }
         }
-        // char[][] chess = new char[m][n];
-        // for(int i=0; i<n; i++){
-        //     String chessIn = br.readLine();
-        //     for(int j=0; j<m; j++){
-        //         chess[i][j] = chessIn.charAt(j);
-        //     }
-        // }
-        System.out.println("----------");
-        for(String c : chess){
-            System.out.println(c);
+        String result;
+        for(int i=0; i<m; i++){
+            
+            System.out.print(chess[0][i]);
         }
+        
 
 
 
