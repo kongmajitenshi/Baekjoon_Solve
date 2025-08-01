@@ -1,5 +1,7 @@
 package Answer;
 
+import java.util.ArrayDeque;
+import java.util.Deque;
 import java.util.Scanner;
 
 public class baekjoon_2164 {
@@ -22,10 +24,17 @@ public class baekjoon_2164 {
          */
         Scanner sc = new Scanner(System.in);
         int N = sc.nextInt();
-        int[] nums = new int[N];
+        Deque<Integer> nums = new ArrayDeque<Integer>(N);
         for(int i=0; i<N; i++){
-            nums[i] = i+1;  // 여기선 0번 인덱스가 맨 위, N번 인덱스가 맨 아래가 됨
+            nums.add(i+1);
         }
+
+        for(int i=0; i<N-1; i++){
+            nums.pollFirst();
+            nums.addLast(nums.pollFirst());
+        }
+        
+        System.out.println(nums.getFirst());
 
         sc.close();
     }
